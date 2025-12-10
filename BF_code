@@ -1,0 +1,2009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic SEO -->
+    <meta charset="UTF-8">
+    <title>Smartgreen House | Smart Automated Sustainable Greenhouses</title>
+    <meta name="description" content="Smartgreen House designs smart, automated and sustainable greenhouses for homes, cafés, restaurants and small farms. Grow more, waste less, all year round.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===============================
+           Root & Global Styles
+        =================================*/
+        :root {
+            --color-primary: #2f9e44;
+            --color-primary-dark: #22863a;
+            --color-primary-light: #d9f2e3;
+            --color-accent: #35b46e;
+            --color-bg: #ffffff;
+            --color-bg-alt: #f5f7f6;
+            --color-text: #1f2933;
+            --color-text-light: #6b7280;
+            --color-border: #e1e5ea;
+            --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+            --radius-lg: 18px;
+            --radius-pill: 999px;
+            --max-width: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--color-text);
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-intro {
+            max-width: 640px;
+            margin-bottom: 2.5rem;
+        }
+
+        .section-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.11em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: 0.35rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.98rem;
+            color: var(--color-text-light);
+            margin: 0;
+        }
+
+        /* ===============================
+           Header & Navigation
+        =================================*/
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 4.25rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .logo-mark {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            background: radial-gradient(circle at 20% 0, #8de28b, #2f9e44);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f0fdf4;
+            font-size: 0.95rem;
+            box-shadow: 0 6px 18px rgba(22, 163, 74, 0.4);
+        }
+
+        .logo-text-major {
+            font-size: 1rem;
+        }
+
+        .logo-text-minor {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--color-text-light);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0.92rem;
+        }
+
+        .nav-links a {
+            position: relative;
+            padding-bottom: 0.2rem;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-primary);
+            transition: width 0.18s ease-out;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            padding: 0.45rem 1rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--color-primary);
+            color: #fff;
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            font-size: 0.86rem;
+            font-weight: 600;
+            box-shadow: 0 14px 30px rgba(34, 197, 94, 0.35);
+            transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
+        }
+
+        .nav-cta:hover,
+        .nav-cta:focus-visible {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 38px rgba(22, 163, 74, 0.4);
+            filter: brightness(1.03);
+        }
+
+        .nav-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            background-color: #ffffff;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-toggle-bar {
+            width: 18px;
+            height: 2px;
+            background-color: #111827;
+            border-radius: 999px;
+            position: relative;
+            transition: transform 0.14s ease-out, background-color 0.14s ease-out;
+        }
+
+        .nav-toggle-bar::before,
+        .nav-toggle-bar::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 18px;
+            height: 2px;
+            background-color: #111827;
+            border-radius: 999px;
+            transition: transform 0.14s ease-out, top 0.14s ease-out, opacity 0.14s ease-out;
+        }
+
+        .nav-toggle-bar::before {
+            top: -5px;
+        }
+
+        .nav-toggle-bar::after {
+            top: 5px;
+        }
+
+        .nav-toggle.open .nav-toggle-bar {
+            background-color: transparent;
+        }
+
+        .nav-toggle.open .nav-toggle-bar::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        .nav-toggle.open .nav-toggle-bar::after {
+            top: 0;
+            transform: rotate(-45deg);
+        }
+
+        /* ===============================
+           Hero
+        =================================*/
+        .hero {
+            padding: 5.5rem 0 4.5rem;
+            background: radial-gradient(circle at 0 0, #dcfce7 0, #f5f7f6 38%, #ffffff 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+            gap: 2.75rem;
+            align-items: center;
+        }
+
+        .hero-eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-title {
+            font-size: clamp(2.2rem, 3vw + 1.8rem, 2.9rem);
+            line-height: 1.12;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            color: var(--color-text-light);
+            max-width: 480px;
+            margin-bottom: 1.6rem;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.7rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.75rem;
+            border-radius: var(--radius-pill);
+            background-color: rgba(34, 197, 94, 0.08);
+            font-size: 0.78rem;
+            color: var(--color-primary-dark);
+            border: 1px solid rgba(34, 197, 94, 0.22);
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: radial-gradient(circle at 30% 0, #bbf7d0, #16a34a);
+        }
+
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 1.3rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: var(--radius-pill);
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: transform 0.12s ease-out, box-shadow 0.12s ease-out, background-color 0.12s ease-out, border-color 0.12s ease-out;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+            color: #ffffff;
+            box-shadow: 0 18px 40px rgba(22, 163, 74, 0.5);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+        }
+
+        .btn-primary:hover,
+        .btn-primary:focus-visible {
+            transform: translateY(-1px);
+            box-shadow: 0 22px 48px rgba(22, 163, 74, 0.6);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-secondary:hover,
+        .btn-secondary:focus-visible {
+            border-color: var(--color-primary);
+            background-color: var(--color-bg-alt);
+            transform: translateY(-1px);
+        }
+
+        .hero-meta {
+            font-size: 0.82rem;
+            color: var(--color-text-light);
+        }
+
+        .hero-meta strong {
+            color: var(--color-primary-dark);
+        }
+
+        .hero-media {
+            position: relative;
+        }
+
+        .hero-card {
+            background-color: #ffffff;
+            border-radius: 26px;
+            padding: 1.25rem 1.3rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(209, 213, 219, 0.7);
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-card-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .hero-chip {
+            padding: 0.16rem 0.6rem;
+            border-radius: var(--radius-pill);
+            background-color: var(--color-primary-light);
+            color: var(--color-primary-dark);
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .hero-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.85rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .hero-metric {
+            padding: 0.65rem 0.7rem;
+            border-radius: 14px;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+        }
+
+        .hero-metric-label {
+            font-size: 0.72rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.2rem;
+        }
+
+        .hero-metric-value {
+            font-weight: 600;
+            font-size: 0.96rem;
+        }
+
+        .hero-metric-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.16rem 0.5rem;
+            border-radius: var(--radius-pill);
+            background-color: rgba(16, 185, 129, 0.1);
+            font-size: 0.7rem;
+            color: var(--color-primary-dark);
+        }
+
+        .hero-status {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.78rem;
+            color: var(--color-text-light);
+        }
+
+        .hero-status-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background-color: #22c55e;
+            box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.18);
+        }
+
+        .hero-photo-badge {
+            position: absolute;
+            right: -0.3rem;
+            bottom: -0.6rem;
+            width: 140px;
+            border-radius: 20px;
+            background-color: rgba(15, 23, 42, 0.96);
+            color: #f9fafb;
+            padding: 0.55rem 0.7rem;
+            font-size: 0.75rem;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.85);
+        }
+
+        .hero-photo-badge-title {
+            font-weight: 600;
+            margin-bottom: 0.1rem;
+        }
+
+        .hero-photo-badge-text {
+            font-size: 0.7rem;
+            color: #e5e7eb;
+        }
+
+        /* ===============================
+           About
+        =================================*/
+        .about {
+            background-color: var(--color-bg);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+            gap: 2.5rem;
+        }
+
+        .about-pill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.6rem;
+        }
+
+        .about-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 0.75rem;
+            background-color: #f3f4f6;
+            border-radius: 999px;
+            font-size: 0.8rem;
+        }
+
+        .about-pill-icon {
+            width: 16px;
+            height: 16px;
+            border-radius: 999px;
+            background-color: rgba(22, 163, 74, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.72rem;
+            color: var(--color-primary-dark);
+        }
+
+        .about-highlight-card {
+            background: linear-gradient(135deg, #ecfdf3, #f9fafb);
+            border-radius: var(--radius-lg);
+            padding: 1rem 1rem 1.1rem;
+            border: 1px solid #bbf7d0;
+            font-size: 0.86rem;
+            color: var(--color-text-light);
+        }
+
+        .about-highlight-card strong {
+            color: var(--color-primary-dark);
+        }
+
+        /* ===============================
+           Solutions / Products
+        =================================*/
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.75rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 1.5rem 1.4rem;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 14px 38px rgba(15, 23, 42, 0.04);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-header-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--color-text-light);
+            margin-bottom: 0.4rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.45rem;
+        }
+
+        .card-subtitle {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.85rem;
+        }
+
+        .card-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.16rem 0.55rem;
+            border-radius: var(--radius-pill);
+            background-color: rgba(34, 197, 94, 0.06);
+            color: var(--color-primary-dark);
+            font-size: 0.78rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card-tag-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background-color: var(--color-primary);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1rem;
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.45rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .feature-icon {
+            margin-top: 0.2rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 999px;
+            border: 1px solid rgba(34, 197, 94, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: var(--color-primary-dark);
+        }
+
+        .card-footer {
+            margin-top: auto;
+            font-size: 0.82rem;
+            color: var(--color-text-light);
+        }
+
+        /* ===============================
+           Pricing
+        =================================*/
+        .pricing {
+            background-color: var(--color-bg-alt);
+        }
+
+        .pricing-note {
+            font-size: 0.88rem;
+            color: var(--color-text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-card {
+            border-top: 3px solid transparent;
+        }
+
+        .pricing-card.highlight {
+            border-top-color: var(--color-primary);
+            box-shadow: 0 24px 60px rgba(22, 163, 74, 0.16);
+            transform: translateY(-2px);
+        }
+
+        .pricing-meta {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-primary-dark);
+        }
+
+        .price-period {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+        }
+
+        .pricing-caption {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.7rem;
+        }
+
+        .pricing-included {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 0.9rem;
+            font-size: 0.86rem;
+            color: var(--color-text-light);
+        }
+
+        .pricing-included li {
+            margin-bottom: 0.35rem;
+        }
+
+        .pricing-cta {
+            display: inline-flex;
+            padding: 0.65rem 1rem;
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--color-primary);
+            font-size: 0.86rem;
+            font-weight: 600;
+            color: var(--color-primary-dark);
+            background-color: rgba(34, 197, 94, 0.06);
+            cursor: pointer;
+        }
+
+        .pricing-cta:hover,
+        .pricing-cta:focus-visible {
+            background-color: rgba(34, 197, 94, 0.13);
+        }
+
+        /* ===============================
+           Use Cases
+        =================================*/
+        .usecases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .usecase-card {
+            background-color: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 1.3rem 1.3rem 1.35rem;
+            border: 1px solid var(--color-border);
+        }
+
+        .usecase-label {
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-text-light);
+            margin-bottom: 0.4rem;
+        }
+
+        .usecase-title {
+            font-size: 1rem;
+            margin-bottom: 0.45rem;
+        }
+
+        .usecase-body {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-bottom: 0.7rem;
+        }
+
+        .usecase-meta {
+            font-size: 0.8rem;
+            color: var(--color-primary-dark);
+        }
+
+        /* ===============================
+           Testimonials
+        =================================*/
+        .testimonials {
+            background-color: var(--color-bg);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 1.3rem 1.3rem;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
+            position: relative;
+        }
+
+        .testimonial-quote-icon {
+            position: absolute;
+            top: 0.9rem;
+            right: 1rem;
+            font-size: 1.6rem;
+            color: rgba(148, 163, 184, 0.4);
+        }
+
+        .testimonial-text {
+            font-size: 0.92rem;
+            color: var(--color-text-light);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-author {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+        }
+
+        /* ===============================
+           FAQ
+        =================================*/
+        .faq {
+            background-color: var(--color-bg-alt);
+        }
+
+        .faq-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-width: 800px;
+        }
+
+        .faq-item {
+            border-radius: 16px;
+            background-color: #ffffff;
+            border: 1px solid var(--color-border);
+            padding: 1rem 1rem 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-question {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin: 0;
+        }
+
+        /* ===============================
+           Contact
+        =================================*/
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 1.6rem 1.6rem 1.5rem;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+        }
+
+        .contact-form-row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .form-group {
+            margin-bottom: 0.85rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .form-label span {
+            color: #dc2626;
+        }
+
+        .form-control,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.7rem 0.75rem;
+            border-radius: 10px;
+            border: 1px solid var(--color-border);
+            font-family: inherit;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.12s ease-out, box-shadow 0.12s ease-out, background-color 0.12s ease-out;
+            background-color: #ffffff;
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .form-control:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            border-color: rgba(34, 197, 94, 0.9);
+            box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.32);
+            background-color: #f9fffb;
+        }
+
+        .form-control.error,
+        .form-select.error,
+        .form-textarea.error {
+            border-color: #dc2626;
+            box-shadow: 0 0 0 1px rgba(239, 68, 68, 0.15);
+        }
+
+        .form-help {
+            font-size: 0.78rem;
+            color: var(--color-text-light);
+            margin-top: 0.1rem;
+        }
+
+        .form-status {
+            margin-top: 0.7rem;
+            font-size: 0.84rem;
+            padding: 0.55rem 0.8rem;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .form-status.error {
+            display: block;
+            background-color: #fef2f2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+        }
+
+        .form-status.success {
+            display: block;
+            background-color: #ecfdf3;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+        }
+
+        .contact-aside {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+        }
+
+        .contact-aside-highlight {
+            padding: 0.7rem 0.9rem;
+            border-radius: 14px;
+            background-color: #ecfdf3;
+            border: 1px solid #bbf7d0;
+            margin-bottom: 0.9rem;
+            font-size: 0.86rem;
+        }
+
+        .contact-meta-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0.88rem;
+        }
+
+        .contact-meta-list li {
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-meta-label {
+            font-weight: 600;
+        }
+
+        /* ===============================
+           Footer
+        =================================*/
+        .site-footer {
+            border-top: 1px solid var(--color-border);
+            padding: 1.7rem 0 1.8rem;
+            background-color: #ffffff;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            font-size: 0.82rem;
+            color: var(--color-text-light);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            text-decoration: none;
+        }
+
+        .footer-links a:hover,
+        .footer-links a:focus-visible {
+            color: var(--color-primary-dark);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.7rem;
+        }
+
+        .footer-social a {
+            width: 26px;
+            height: 26px;
+            border-radius: 999px;
+            border: 1px solid var(--color-border);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.78rem;
+        }
+
+        .footer-social a:hover,
+        .footer-social a:focus-visible {
+            border-color: var(--color-primary);
+            color: var(--color-primary-dark);
+        }
+
+        /* ===============================
+           Scroll-to-Top Button
+        =================================*/
+        .scroll-top {
+            position: fixed;
+            right: 1.4rem;
+            bottom: 1.4rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            background: radial-gradient(circle at 10% 0, #bbf7d0, #22c55e);
+            color: #ffffff;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 18px 40px rgba(22, 163, 74, 0.6);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.15s ease-out, transform 0.15s ease-out, visibility 0.15s ease-out;
+            z-index: 900;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .scroll-top:focus-visible {
+            outline: 2px solid #e5e7eb;
+            outline-offset: 2px;
+        }
+
+        /* ===============================
+           Responsive
+        =================================*/
+        @media (max-width: 960px) {
+            .hero-grid,
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-media {
+                order: -1;
+            }
+
+            .cards-grid,
+            .usecases-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                height: 4rem;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 4rem;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background-color: #ffffff;
+                padding: 0.7rem 1.5rem 1rem;
+                border-bottom: 1px solid #e5e7eb;
+                max-height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: max-height 0.18s ease-out, opacity 0.18s ease-out;
+            }
+
+            .nav-links.open {
+                max-height: 320px;
+                opacity: 1;
+            }
+
+            .nav-cta {
+                margin-top: 0.3rem;
+                align-self: flex-start;
+            }
+
+            .nav-toggle {
+                display: inline-flex;
+            }
+
+            .hero {
+                padding-top: 4.4rem;
+            }
+
+            section {
+                padding: 3.7rem 0;
+            }
+
+            .cards-grid,
+            .usecases-grid,
+            .testimonials-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .about-pill-list {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .contact-form-row {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .hero-card {
+                border-radius: 20px;
+            }
+
+            .hero-photo-badge {
+                position: static;
+                margin-top: 0.9rem;
+                width: 100%;
+            }
+
+            .scroll-top {
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- =================================
+         Header & Navigation
+    ================================== -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar" aria-label="Main navigation">
+                <a href="#home" class="logo">
+                    <div class="logo-mark" aria-hidden="true">SG</div>
+                    <div>
+                        <div class="logo-text-major">Smartgreen House</div>
+                        <div class="logo-text-minor">Smart greenhouse systems</div>
+                    </div>
+                </a>
+
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-bar"></span>
+                </button>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#use-cases">For Customers</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#contact" class="nav-cta">Request a consultation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- =================================
+             Hero / Home
+        ================================== -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <div class="hero-eyebrow">Automated, sustainable greenhouses</div>
+                        <h1 id="hero-title" class="hero-title">
+                            Grow more, waste less with smart automated greenhouses.
+                        </h1>
+                        <p class="hero-subtitle">
+                            Smartgreen House combines climate automation, intelligent sensors and sustainable design
+                            so residential and small commercial customers can grow fresh produce all year round with minimal effort.
+                        </p>
+
+                        <div class="hero-badges" aria-hidden="true">
+                            <span class="hero-badge">
+                                <span class="hero-badge-dot"></span>
+                                Up to 40% higher yield vs. basic hobby greenhouses
+                            </span>
+                            <span class="hero-badge">
+                                <span class="hero-badge-dot"></span>
+                                Solar-ready, water-efficient infrastructure
+                            </span>
+                        </div>
+
+                        <div class="hero-cta-row">
+                            <a href="#contact" class="btn btn-primary">
+                                Request a consultation
+                            </a>
+                            <a href="#about" class="btn btn-secondary">
+                                Learn how it works
+                            </a>
+                        </div>
+
+                        <p class="hero-meta">
+                            Designed for <strong>urban homes, cafés, restaurants and small farms</strong> that want reliable, sustainable growing capacity.
+                        </p>
+                    </div>
+
+                    <!-- Hero visual card (placeholder visualization) -->
+                    <div class="hero-media" aria-hidden="true">
+                        <div class="hero-card">
+                            <div class="hero-card-header">
+                                <div class="hero-card-title">Live greenhouse overview</div>
+                                <div class="hero-chip">Automated control</div>
+                            </div>
+                            <div class="hero-metrics">
+                                <div class="hero-metric">
+                                    <div class="hero-metric-label">Inside climate</div>
+                                    <div class="hero-metric-value">22.4°C · 65% RH</div>
+                                    <div class="hero-metric-pill">
+                                        ● Stable
+                                        <span>Ideal growth zone</span>
+                                    </div>
+                                </div>
+                                <div class="hero-metric">
+                                    <div class="hero-metric-label">Irrigation</div>
+                                    <div class="hero-metric-value">Automated · 3 cycles</div>
+                                    <div class="hero-metric-pill">
+                                        ● Water saving
+                                        <span>Up to 50% less use</span>
+                                    </div>
+                                </div>
+                                <div class="hero-metric">
+                                    <div class="hero-metric-label">Energy</div>
+                                    <div class="hero-metric-value">Solar + grid</div>
+                                    <div class="hero-metric-pill">
+                                        ● Eco mode
+                                        <span>Smart scheduling</span>
+                                    </div>
+                                </div>
+                                <div class="hero-metric">
+                                    <div class="hero-metric-label">Production forecast</div>
+                                    <div class="hero-metric-value">+32% yield</div>
+                                    <div class="hero-metric-pill">
+                                        ● Data-driven
+                                        <span>Sensor insights</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hero-status">
+                                <span class="hero-status-dot"></span>
+                                <span>System online · Remote monitoring via mobile app</span>
+                            </div>
+                        </div>
+
+                        <div class="hero-photo-badge">
+                            <div class="hero-photo-badge-title">Ideal for limited space</div>
+                            <p class="hero-photo-badge-text">
+                                Compact footprints sized for rooftops, patios and small plots, with modular
+                                options for growing with your demand.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             About
+        ================================== -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <div class="about-grid">
+                    <div>
+                        <div class="section-intro">
+                            <div class="section-eyebrow">About Smartgreen House</div>
+                            <h2 id="about-title" class="section-title">
+                                Enabling year-round local food production, even in unpredictable climates.
+                            </h2>
+                            <p class="section-subtitle">
+                                Smartgreen House was founded to close the gap between traditional hobby greenhouses
+                                and complex commercial installations. Many households, cafés and small farms want
+                                reliable, high-quality crops but lack time, technical expertise and stable weather conditions.
+                            </p>
+                        </div>
+                        <p>
+                            Our systems combine automated climate control, irrigation and lighting with a simple user interface.
+                            Sensors constantly monitor temperature, humidity, soil moisture and light levels, adjusting conditions
+                            to match plant needs. The result is consistent growth, fewer failures and higher yields with minimal manual work.
+                        </p>
+                        <p>
+                            Every Smartgreen House is engineered around sustainability. We prioritize insulated structures, solar-ready power,
+                            closed-loop water systems and durable materials that perform well in urban and suburban environments.
+                            Customers benefit from lower operating costs and a clearer sustainability story in their own homes or businesses.
+                        </p>
+                    </div>
+                    <div>
+                        <ul class="about-pill-list" aria-label="Key innovation pillars">
+                            <li class="about-pill">
+                                <span class="about-pill-icon">✓</span>
+                                Automation that fits non-technical users
+                            </li>
+                            <li class="about-pill">
+                                <span class="about-pill-icon">✓</span>
+                                Designs optimized for tight urban spaces
+                            </li>
+                            <li class="about-pill">
+                                <span class="about-pill-icon">✓</span>
+                                Energy-efficient, solar-ready infrastructure
+                            </li>
+                            <li class="about-pill">
+                                <span class="about-pill-icon">✓</span>
+                                Data-driven insights for better planning
+                            </li>
+                        </ul>
+                        <div class="about-highlight-card">
+                            <strong>Business fundamentals focus:</strong> Smartgreen House targets a clear,
+                            growing niche of residential and small commercial customers who need predictable, sustainable
+                            production rather than experimental gardening. Our value proposition combines cost efficiency,
+                            technology-enabled reliability and strong environmental credentials.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             Solutions / Products
+        ================================== -->
+        <section id="solutions" aria-labelledby="solutions-title">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-eyebrow">Solutions</div>
+                    <h2 id="solutions-title" class="section-title">
+                        Product tiers tailored to homes, hospitality and small farms.
+                    </h2>
+                    <p class="section-subtitle">
+                        Every Smartgreen House is delivered as an integrated solution: structure, climate systems,
+                        smart controls and onboarding support. Packages can be scaled or customized based on location and demand.
+                    </p>
+                </div>
+
+                <div class="cards-grid">
+                    <!-- Home Starter Greenhouse -->
+                    <article class="card" aria-label="Home Starter Greenhouse">
+                        <div class="card-header-label">Residential</div>
+                        <h3 class="card-title">Home Starter Greenhouse</h3>
+                        <p class="card-subtitle">
+                            Compact automated greenhouse for balconies, backyards and rooftop gardens.
+                            Ideal for households that want fresh herbs, salads and vegetables close at hand.
+                        </p>
+                        <div class="card-tag">
+                            <span class="card-tag-dot"></span>
+                            Best for families & hobby growers
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Pre-configured climate program for common crops (tomatoes, herbs, leafy greens).
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Automated irrigation based on soil moisture sensors to avoid over- or under-watering.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Mobile app with simple “traffic-light” status indicators and push notifications.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Insulated panels suitable for year-round use in urban and suburban environments.
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            Typical customers: urban households, eco-conscious families, rooftop gardeners.
+                        </div>
+                    </article>
+
+                    <!-- Urban Pro Greenhouse -->
+                    <article class="card" aria-label="Urban Pro Greenhouse">
+                        <div class="card-header-label">Hospitality</div>
+                        <h3 class="card-title">Urban Pro Greenhouse</h3>
+                        <p class="card-subtitle">
+                            Mid-scale greenhouse system with enhanced controls and branding options
+                            for cafés, restaurants and boutique hotels that grow visible, local ingredients.
+                        </p>
+                        <div class="card-tag">
+                            <span class="card-tag-dot"></span>
+                            Best for cafés & restaurants
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Zoned climate and lighting control for multiple crop types in one structure.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Production forecasting dashboards for menu planning and purchasing decisions.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Optional customer-facing design with glass façades and branding signage.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Integration with solar and time-of-use tariffs to reduce energy costs.
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            Typical customers: cafés, farm-to-table restaurants, small hotels, culinary schools.
+                        </div>
+                    </article>
+
+                    <!-- Commercial Mini-Farm Greenhouse -->
+                    <article class="card" aria-label="Commercial Mini-Farm Greenhouse">
+                        <div class="card-header-label">Small farms</div>
+                        <h3 class="card-title">Commercial Mini-Farm Greenhouse</h3>
+                        <p class="card-subtitle">
+                            High-capacity, modular greenhouse platform for small farms, florists and urban farming
+                            ventures that require stable, scalable output.
+                        </p>
+                        <div class="card-tag">
+                            <span class="card-tag-dot"></span>
+                            Best for small farms & urban growers
+                        </div>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Advanced sensor suite tracking climate, substrate, nutrient and light data.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Configurable automation rules and remote access for multi-site operations.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Structural options for wind, snow and heat resilience in diverse climates.
+                            </li>
+                            <li>
+                                <span class="feature-icon">✓</span>
+                                Data exports to support certification, traceability and investor reporting.
+                            </li>
+                        </ul>
+                        <div class="card-footer">
+                            Typical customers: specialty crop farms, florists, community gardens, urban farm startups.
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             Pricing
+        ================================== -->
+        <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-eyebrow">Pricing</div>
+                    <h2 id="pricing-title" class="section-title">
+                        Clear tiers with transparent inclusions and scalable options.
+                    </h2>
+                    <p class="section-subtitle">
+                        Pricing is indicative and may vary by region, size and configuration. Each project starts
+                        with a site review and tailored proposal to match your growing goals and available space.
+                    </p>
+                </div>
+
+                <p class="pricing-note">
+                    All packages include initial design consultation, on-site installation (where available),
+                    user training and remote support during the first growing cycle.
+                </p>
+
+                <div class="cards-grid">
+                    <!-- Pricing: Home Starter -->
+                    <article class="card pricing-card" aria-label="Home Starter pricing">
+                        <h3 class="card-title">Home Starter Greenhouse</h3>
+                        <p class="card-subtitle">
+                            Entry-level smart greenhouse for residential users who want reliable, automated growing
+                            in a compact footprint.
+                        </p>
+                        <div class="pricing-meta">
+                            <span class="price">from €3,500</span>
+                            <span class="price-period">one-off</span>
+                        </div>
+                        <p class="pricing-caption">
+                            Typical setup for a small backyard, terrace or rooftop (4–8 m²).
+                        </p>
+                        <ul class="pricing-included">
+                            <li>Core greenhouse structure with insulated glazing.</li>
+                            <li>Automated ventilation, irrigation and basic climate program.</li>
+                            <li>Starter sensor kit and mobile app access for one household.</li>
+                            <li>Remote check-in and optimization after first harvest.</li>
+                        </ul>
+                        <button type="button" class="pricing-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+                            Request residential quote
+                        </button>
+                    </article>
+
+                    <!-- Pricing: Urban Pro -->
+                    <article class="card pricing-card highlight" aria-label="Urban Pro pricing">
+                        <h3 class="card-title">Urban Pro Greenhouse</h3>
+                        <p class="card-subtitle">
+                            For hospitality venues that want consistent, on-brand production of herbs, salads and specialty crops.
+                        </p>
+                        <div class="pricing-meta">
+                            <span class="price">from €9,500</span>
+                            <span class="price-period">project-based</span>
+                        </div>
+                        <p class="pricing-caption">
+                            Typical setup 10–25 m² including guest-visible design options.
+                        </p>
+                        <ul class="pricing-included">
+                            <li>Zoned climate and lighting control for multiple crop groups.</li>
+                            <li>Production forecasting dashboard and yield-planning support.</li>
+                            <li>Custom branding integration and basic visitor signage.</li>
+                            <li>Priority service level and seasonal optimization review.</li>
+                        </ul>
+                        <button type="button" class="pricing-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+                            Talk to a hospitality specialist
+                        </button>
+                    </article>
+
+                    <!-- Pricing: Commercial Mini-Farm -->
+                    <article class="card pricing-card" aria-label="Commercial Mini-Farm pricing">
+                        <h3 class="card-title">Commercial Mini-Farm Greenhouse</h3>
+                        <p class="card-subtitle">
+                            For farms and urban agriculture ventures that need scalable, data-driven production
+                            with strong risk management.
+                        </p>
+                        <div class="pricing-meta">
+                            <span class="price">from €18,000</span>
+                            <span class="price-period">modular</span>
+                        </div>
+                        <p class="pricing-caption">
+                            Typical starting footprint 30+ m² with modular expansion options.
+                        </p>
+                        <ul class="pricing-included">
+                            <li>Advanced sensor network and configurable automation rules.</li>
+                            <li>Structural engineering for local climate and regulatory context.</li>
+                            <li>Integration with existing infrastructure where feasible.</li>
+                            <li>Optional performance monitoring and yearly strategy review.</li>
+                        </ul>
+                        <button type="button" class="pricing-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+                            Schedule a project scoping call
+                        </button>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             For Customers / Use Cases
+        ================================== -->
+        <section id="use-cases" aria-labelledby="usecases-title">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-eyebrow">Use cases</div>
+                    <h2 id="usecases-title" class="section-title">
+                        Designed for the realities of homes, hospitality and small-scale agriculture.
+                    </h2>
+                    <p class="section-subtitle">
+                        Smartgreen House solutions are tailored around daily routines, staff capacity and space
+                        limitations, not just technical specifications. Below are three core segments we serve.
+                    </p>
+                </div>
+
+                <div class="usecases-grid">
+                    <!-- Residential -->
+                    <article class="usecase-card" aria-label="Residential customers">
+                        <div class="usecase-label">Residential</div>
+                        <h3 class="usecase-title">Families & home gardeners</h3>
+                        <p class="usecase-body">
+                            Households use Smartgreen House to replace imported produce with fresh, pesticide-free
+                            vegetables and herbs grown at home. Automation means busy schedules and changing weather
+                            do not derail harvests.
+                        </p>
+                        <p class="usecase-meta">
+                            Benefits: food quality, cost savings over time, educational value for children,
+                            visible commitment to sustainable living.
+                        </p>
+                    </article>
+
+                    <!-- Hospitality -->
+                    <article class="usecase-card" aria-label="Hospitality customers">
+                        <div class="usecase-label">Hospitality</div>
+                        <h3 class="usecase-title">Cafés, restaurants & hotels</h3>
+                        <p class="usecase-body">
+                            Hospitality venues integrate greenhouses into their brand story, showcasing hyper-local
+                            ingredients grown on-site. Staff receive simple dashboards for planning menus and managing harvests.
+                        </p>
+                        <p class="usecase-meta">
+                            Benefits: differentiated guest experience, marketing story around fresh and local,
+                            reduced reliance on volatile supply chains.
+                        </p>
+                    </article>
+
+                    <!-- Small farms / urban farms -->
+                    <article class="usecase-card" aria-label="Small farms and urban farms">
+                        <div class="usecase-label">Small farms</div>
+                        <h3 class="usecase-title">Small farms & urban farms</h3>
+                        <p class="usecase-body">
+                            Small agricultural businesses extend their growing season, smooth out climate risk and
+                            add specialty crops for premium customers. Data exports make it easier to work with buyers,
+                            certifiers and investors.
+                        </p>
+                        <p class="usecase-meta">
+                            Benefits: more predictable revenue, higher-value crops, better risk management and
+                            stronger sustainability credentials.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             Testimonials
+        ================================== -->
+        <section id="testimonials" class="testimonials" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-eyebrow">Testimonials</div>
+                    <h2 id="testimonials-title" class="section-title">
+                        Customers who already grow smarter, not harder.
+                    </h2>
+                    <p class="section-subtitle">
+                        While Smartgreen House is a young startup, pilot installations with households, cafés and small farms
+                        show the impact of combining automation, design and support.
+                    </p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <figure class="testimonial-card">
+                        <span class="testimonial-quote-icon" aria-hidden="true">“</span>
+                        <blockquote class="testimonial-text">
+                            Our café now harvests herbs and salad leaves just before lunch service. The app tells our team
+                            when to pick and what is coming ready next week, which makes menu planning much easier.
+                        </blockquote>
+                        <figcaption>
+                            <div class="testimonial-author">Aida, café owner</div>
+                            <div class="testimonial-role">Urban Pro Greenhouse · City café with rooftop garden</div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial-card">
+                        <span class="testimonial-quote-icon" aria-hidden="true">“</span>
+                        <blockquote class="testimonial-text">
+                            We wanted to grow more of our own food but could not commit to daily manual work.
+                            The automated irrigation and climate control mean our small greenhouse runs reliably,
+                            even when we travel.
+                        </blockquote>
+                        <figcaption>
+                            <div class="testimonial-author">Bekzod &amp; Dilnoza</div>
+                            <div class="testimonial-role">Home Starter Greenhouse · Family of four</div>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="testimonial-card">
+                        <span class="testimonial-quote-icon" aria-hidden="true">“</span>
+                        <blockquote class="testimonial-text">
+                            For our specialty greens and edible flowers, stable conditions are critical.
+                            The Smartgreen House system has reduced climate-related loss and given us data we can share
+                            with our restaurant customers.
+                        </blockquote>
+                        <figcaption>
+                            <div class="testimonial-author">Karim, small farm founder</div>
+                            <div class="testimonial-role">Commercial Mini-Farm Greenhouse · Urban farm cooperative</div>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================================
+             FAQ
+        ================================== -->
+        <section id="faq" class="faq" aria-labelledby="faq-title">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-eyebrow">FAQ</div>
+                    <h2 id="faq-title" class="section-title">
+                        Frequently asked questions about Smartgreen House.
+                    </h2>
+                    <p class="section-subtitle">
+                        Below are answers to the questions we most often hear from prospective residential and commercial customers.
+                        If you need details specific to your location or business model, we are happy to discuss them directly.
+                    </p>
+                </div>
+
+                <ul class="faq-list">
+                    <li class="faq-item">
+                        <h3 class="faq-question">How much maintenance does a Smartgreen House require?</h3>
+                        <p class="faq-answer">
+                            Routine maintenance mainly involves checking nutrient and water levels, cleaning filters and observing plants.
+                            Most climate, irrigation and ventilation tasks are automated. We provide a simple maintenance checklist
+                            and optional service packages for customers who prefer support.
+                        </p>
+                    </li>
+                    <li class="faq-item">
+                        <h3 class="faq-question">Do I need technical skills to operate the system?</h3>
+                        <p class="faq-answer">
+                            No advanced technical skills are required. The user interface is designed around clear icons and plain language.
+                            Pre-set growing programs cover common crops, and our team handles the initial configuration.
+                            Training and quick-reference guides are always included.
+                        </p>
+                    </li>
+                    <li class="faq-item">
+                        <h3 class="faq-question">Can the greenhouse work in extreme climates?</h3>
+                        <p class="faq-answer">
+                            Yes, systems are specified according to local climate data. For hotter or colder regions we add insulation,
+                            shading and ventilation capacity, and design suitable control strategies. For very extreme climates,
+                            we provide an upfront feasibility assessment during the consultation process.
+                        </p>
+                    </li>
+                    <li class="faq-item">
+                        <h3 class="faq-question">Do you provide installation and after-sales support?</h3>
+                        <p class="faq-answer">
+                            Yes. Where possible, our team or certified partners deliver and install the greenhouse on site.
+                            We support customers remotely during the first growing cycle, and optional maintenance and
+                            optimization plans are available for commercial users.
+                        </p>
+                    </li>
+                    <li class="faq-item">
+                        <h3 class="faq-question">What happens if there is a power or internet outage?</h3>
+                        <p class="faq-answer">
+                            Core climate functions are designed to fail-safe. Short outages generally do not impact crops,
+                            while longer outages can be mitigated with backup power and ventilation strategies.
+                            We can advise on backup options during project planning, especially for commercial customers.
+                        </p>
+                    </li>
+                    <li class="faq-item">
+                        <h3 class="faq-question">Can the system integrate with existing infrastructure?</h3>
+                        <p class="faq-answer">
+                            In many cases, yes. We can connect to existing water supplies, solar installations and monitoring systems
+                            provided they meet basic technical requirements. This is assessed during the site survey and reflected in
+                            the project proposal.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- =================================
+             Contact
+        ================================== -->
+        <section id="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section-intro">
+                    <div class="section-eyebrow">Contact</div>
+                    <h2 id="contact-title" class="section-title">
+                        Tell us about your space and growing goals.
+                    </h2>
+                    <p class="section-subtitle">
+                        Share a few details about your location, available space and what you would like to grow.
+                        We will respond with a short feasibility assessment and a proposed next step for your Smartgreen House project.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact form -->
+                    <div class="contact-card" aria-label="Request consultation form">
+                        <form id="contact-form" novalidate>
+                            <div class="contact-form-row">
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name <span>*</span></label>
+                                    <input type="text" id="name" name="name" class="form-control" required aria-required="true">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email <span>*</span></label>
+                                    <input type="email" id="email" name="email" class="form-control" required aria-required="true">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="customerType" class="form-label">Customer type <span>*</span></label>
+                                <select id="customerType" name="customerType" class="form-select" required aria-required="true">
+                                    <option value="">Please select</option>
+                                    <option value="Residential">Residential / household</option>
+                                    <option value="Hospitality">Café / restaurant / hotel</option>
+                                    <option value="Small farm">Small farm / urban farm</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message or project description <span>*</span></label>
+                                <textarea id="message" name="message" class="form-textarea" required aria-required="true" placeholder="Describe your available space, crops you are interested in and your timeline."></textarea>
+                                <div class="form-help">
+                                    A few sentences are enough. We will follow up with specific questions if needed.
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Submit request
+                            </button>
+                            <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+                        </form>
+                    </div>
+
+                    <!-- Contact info & narrative -->
+                    <aside class="contact-aside">
+                        <div class="contact-aside-highlight">
+                            Typical response time: within two business days. For commercial projects we may schedule a short
+                            online call to understand your operational constraints and growth targets.
+                        </div>
+                        <p>
+                            For Business Fundamentals assessments, this contact process represents the top of the sales funnel:
+                            capturing qualified interest, segmenting leads by customer type and initiating tailored solution design.
+                            Data from the form can feed directly into a CRM system to track pipeline and conversion.
+                        </p>
+                        <ul class="contact-meta-list">
+                            <li>
+                                <span class="contact-meta-label">Ideal project stage:&nbsp;</span>
+                                Concept or early planning, with rough budget and timeline in mind.
+                            </li>
+                            <li>
+                                <span class="contact-meta-label">Project geographies:&nbsp;</span>
+                                Urban and suburban regions with power and water access; rural projects considered case-by-case.
+                            </li>
+                            <li>
+                                <span class="contact-meta-label">Next step after submission:&nbsp;</span>
+                                We review feasibility, then share a short options summary and, if relevant, a proposal outline.
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =================================
+         Footer
+    ================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    © <span id="footer-year"></span> Smartgreen House. All rights reserved.
+                    &nbsp;|&nbsp;
+                    Sustainable smart greenhouses for homes, hospitality and small farms.
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Back to top</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                </div>
+                <div class="footer-social" aria-label="Social media">
+                    <a href="https://www.linkedin.com" aria-label="Smartgreen House on LinkedIn">in</a>
+                    <a href="https://www.instagram.com" aria-label="Smartgreen House on Instagram">ig</a>
+                    <a href="https://www.facebook.com" aria-label="Smartgreen House on Facebook">fb</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll-to-top button -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script>
+        // ================================
+        // Mobile navigation toggle
+        // ================================
+        (function () {
+            const navToggle = document.getElementById('navToggle');
+            const navLinks = document.getElementById('navLinks');
+
+            if (!navToggle || !navLinks) return;
+
+            navToggle.addEventListener('click', function () {
+                const isOpen = navLinks.classList.toggle('open');
+                navToggle.classList.toggle('open', isOpen);
+                navToggle.setAttribute('aria-expanded', String(isOpen));
+            });
+
+            // Close menu on link click (for mobile)
+            navLinks.addEventListener('click', function (event) {
+                if (event.target.tagName.toLowerCase() === 'a' && navLinks.classList.contains('open')) {
+                    navLinks.classList.remove('open');
+                    navToggle.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+
+        // ================================
+        // Scroll-to-top button behavior
+        // ================================
+        (function () {
+            const scrollTopBtn = document.getElementById('scrollTopBtn');
+            if (!scrollTopBtn) return;
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 400) {
+                    scrollTopBtn.classList.add('visible');
+                } else {
+                    scrollTopBtn.classList.remove('visible');
+                }
+            });
+
+            scrollTopBtn.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        })();
+
+        // ================================
+        // Contact form validation & feedback
+        // ================================
+        (function () {
+            const form = document.getElementById('contact-form');
+            const statusEl = document.getElementById('form-status');
+
+            if (!form || !statusEl) return;
+
+            function resetErrors() {
+                const controls = form.querySelectorAll('.form-control, .form-select, .form-textarea');
+                controls.forEach(control => {
+                    control.classList.remove('error');
+                });
+                statusEl.textContent = '';
+                statusEl.classList.remove('error', 'success');
+            }
+
+            function validateEmail(email) {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailPattern.test(email);
+            }
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+                resetErrors();
+
+                const nameInput = form.querySelector('#name');
+                const emailInput = form.querySelector('#email');
+                const typeSelect = form.querySelector('#customerType');
+                const messageInput = form.querySelector('#message');
+
+                let hasError = false;
+
+                if (!nameInput.value.trim()) {
+                    nameInput.classList.add('error');
+                    hasError = true;
+                }
+
+                if (!emailInput.value.trim() || !validateEmail(emailInput.value.trim())) {
+                    emailInput.classList.add('error');
+                    hasError = true;
+                }
+
+                if (!typeSelect.value.trim()) {
+                    typeSelect.classList.add('error');
+                    hasError = true;
+                }
+
+                if (!messageInput.value.trim()) {
+                    messageInput.classList.add('error');
+                    hasError = true;
+                }
+
+                if (hasError) {
+                    statusEl.textContent = 'Please fill in all required fields with valid information before submitting.';
+                    statusEl.classList.add('error');
+                    return;
+                }
+
+                // Simulated successful submission
+                form.reset();
+                statusEl.textContent = 'Thank you for your message. We have received your request and will respond shortly.';
+                statusEl.classList.add('success');
+            });
+        })();
+
+        // ================================
+        // Footer year helper
+        // ================================
+        (function () {
+            const yearEl = document.getElementById('footer-year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
+        })();
+    </script>
+</body>
+</html>
